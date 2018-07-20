@@ -1,0 +1,42 @@
+## Interface: 80000
+## Title: IcySlot
+## Notes: IcySlot is for transferring settings between accounts. Original author: tg123.
+## Notes-deDE: IcySlot is for transferring settings between accounts. Original author: tg123.
+## Notes-esES: IcySlot is for transferring settings between accounts. Original author: tg123.
+## Notes-esMX: IcySlot is for transferring settings between accounts. Original author: tg123.
+## Notes-frFR: IcySlot is for transferring settings between accounts. Original author: tg123.
+## Notes-itIT: IcySlot is for transferring settings between accounts. Original author: tg123.
+## Notes-koKR: IcySlot is for transferring settings between accounts. Original author: tg123.
+## Notes-ptBR: IcySlot is for transferring settings between accounts. Original author: tg123.
+## Notes-ruRU: IcySlot is for transferring settings between accounts. Original author: tg123.
+## Notes-zhCN: 保存你的技能按钮位置。原始作者：tg123。
+## Notes-zhTW: IcySlot可以跨帳號綁定技能與按鍵設置。原始作者：tg123。
+## Author: Icyblade, tg123
+## Version: v6.0.0
+
+libs\LibStub\LibStub.lua
+libs\base64.lua
+libs\crc32.lua
+
+libs\lua-pb\pb\fakerequire.lua
+libs\lua-pb\pb\utils.lua
+libs\lua-pb\pb\handlers.lua
+libs\lua-pb\pb\standard\buffer.lua
+libs\lua-pb\pb\standard\unknown.lua
+libs\lua-pb\pb\standard\repeated.lua
+
+libs\lua-pb\pb\standard\dump.lua
+libs\lua-pb\pb\standard\message.lua
+
+libs\lua-pb\pb\standard\pack.lua
+libs\lua-pb\pb\standard\unpack.lua
+libs\lua-pb\pb\standard.lua
+
+libs\lua-pb\pb-wow.lua
+
+locales.lua
+keys.lua
+IcySlot.xml
+
+PbMySlot.lua
+IcySlot.lua
