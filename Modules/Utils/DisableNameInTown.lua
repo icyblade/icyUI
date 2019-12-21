@@ -1,6 +1,6 @@
 local _, Engine = ...
 
-local WORLD_MAP_FRAME = _G['WorldMapFrame']
+local C_Map = C_Map
 
 local TOWN_MASK = {
     [1453] = true, -- Stormwind
@@ -8,13 +8,17 @@ local TOWN_MASK = {
     [1455] = true, -- Ironforge
     [1456] = true, -- Thunder Bluff
     [1457] = true, -- Darnassus
-    [1458] = true -- Undercity
+    [1458] = true, -- Undercity
 }
 
-local TARGET_EVENTS = {'ZONE_CHANGED', 'ZONE_CHANGED_INDOORS', 'PLAYER_ENTERING_WORLD'}
+local TARGET_EVENTS = {
+    'ZONE_CHANGED_NEW_AREA',
+    'ZONE_CHANGED',
+    'ZONE_CHANGED_INDOORS'
+}
 
 local function DisableNameInTownCallback()
-    local mapID = WORLD_MAP_FRAME:GetMapID()
+    local mapID = C_Map.GetBestMapForUnit("player")
     if (TOWN_MASK[mapID]) then
         SetCVar('UnitNameFriendlyPlayerName', 0)
         SetCVar('UnitNameFriendlyPetName', 0)
@@ -22,7 +26,6 @@ local function DisableNameInTownCallback()
         SetCVar('UnitNameFriendlyPlayerName', 1)
         SetCVar('UnitNameFriendlyPetName', 1)
     end
-    return true
 end
 
 for k, v in pairs(TARGET_EVENTS) do
