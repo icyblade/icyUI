@@ -1,0 +1,9 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Include file="Core.lua"/>
+	<Include file="Blacklist.lua"/>
+    <Include file="Whitelist.lua"/>
+	<Include file="Flight.lua"/>
+	<Include file="GuildRecruit.lua"/>
+	<Include file="RMT.lua"/>
+	<Include file="Trade.lua"/>
+</Ui>

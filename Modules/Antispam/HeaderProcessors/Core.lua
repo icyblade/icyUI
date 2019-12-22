@@ -1,0 +1,3 @@
+local _, Engine = ...
+
+Engine.Modules.Antispam.HeaderProcessors = {}

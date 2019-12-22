@@ -1,0 +1,10 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Include file="Init.lua"/>
+	<Include file="Utils.lua"/>
+	<Include file="Insights.lua"/>
+	<Include file="PreProcessors.lua"/>
+	<Include file="HeaderProcessors\Init.xml"/>
+	<Include file="ContentProcessors\Init.xml"/>
+	<Include file="PostProcessors.lua"/>
+	<Include file="Core.lua"/>
+</Ui>

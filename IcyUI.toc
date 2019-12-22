@@ -4,6 +4,7 @@
 ## Version: 0.1.0
 ## Notes: Light user interface replacement for World of Warcraft
 ## SavedVariables: IcyUIDB
+## SavedVariablesPerCharacter: IcyUIDBPerChar
 
 Libraries\Init.xml
 Core.lua
