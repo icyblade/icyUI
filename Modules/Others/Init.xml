@@ -1,6 +1,7 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Include file="Core.lua"/>
 	<Include file="AutoDismount.lua"/>
+	<Include file="AutoJoinBigFoot.lua"/>
 	<Include file="DisableNameInTown.lua"/>
 	<Include file="FastLoot.lua"/>
 </Ui>
