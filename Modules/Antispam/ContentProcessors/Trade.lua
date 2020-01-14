@@ -22,7 +22,9 @@ local Patterns = {
     -- Dungeons
     '遗物宝箱钥匙',
     -- Others
-    '位面', '逃税'
+    '位面', '逃税',
+    -- Dungeon Run
+    '奥科索尔腰带', '宝钻', '北地衬肩', '巨石指环', '庄严护腕', '食人魔法师魔棒', '晋升印章'
 }
 
 local function TradeProcessor(payload)

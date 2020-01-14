@@ -23,8 +23,9 @@ local function MessageCallback(self, event, text, playerName, ...)
     ContentProcessors.FlightProcessor(payload)
     ContentProcessors.TradeProcessor(payload)
     ContentProcessors.GuildRecruitProcessor(payload)
+    PostProcessors.ThrottleProcessor(payload)
     PostProcessors.DedupPostProcessor(payload)
-
+    
     if (payload.Label == 'SPAM') then
         return true
     else

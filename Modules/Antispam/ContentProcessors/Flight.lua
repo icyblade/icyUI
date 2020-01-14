@@ -5,14 +5,14 @@ local AddToSenderBlacklist = Engine.Modules.Antispam.HeaderProcessors.AddToSende
 
 local Patterns = {
     -- General
-    '航班', '航空', '飞机', '直达', '机票',
+    '航班', '航空', '飞机', '直达', '机票', '飞碟', '灰机',
     '头等舱', '单程票', '专机', '空运', '高铁', '直通车', '直飞', '滴滴',
     -- Symbols
     '●', '★', '▉▉', '◆', '△', '■■', '✚', '◤',
 }
 local FlightLocations = {
     '血色', '厄运', '加基森', '冬泉谷', 
-    '玛拉顿', 'MLD',
+    '玛拉顿', 'MLD', '紫门',
     '斯坦索姆', 'STSM', 
     '艾萨拉', '取水',
 }
