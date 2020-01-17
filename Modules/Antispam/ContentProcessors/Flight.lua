@@ -14,7 +14,7 @@ local FlightLocations = {
     '血色', '厄运', '加基森', '冬泉谷', 
     '玛拉顿', 'MLD', '紫门',
     '斯坦索姆', 'STSM', 
-    '艾萨拉', '取水',
+    '艾萨拉', '取水', '灭火'
 }
 
 local function FlightProcessor(payload)

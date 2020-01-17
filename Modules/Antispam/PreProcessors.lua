@@ -38,7 +38,11 @@ local confusionSymbols = {
     -- '}',
     '~',
     '，',
-    '。'
+    '。',
+    '《',
+    '》',
+    '！',
+    '？'
 }
 
 local function DeconfusionPreProcessor(payload)

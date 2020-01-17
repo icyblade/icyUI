@@ -42,11 +42,22 @@ local replicationSymbols = {
 local function DedupPostProcessor(payload)
     local text = payload.OriginalText
 
-    -- ABCABC -> ABC
-    local combinedText = string.sub(text .. text, 2, 2 * string.len(text) - 1)
-    local index = string.find(combinedText, text, 1, true)
-    if (index ~= nil) then
-        text = string.sub(text, 1, index + 1) -- Fix Chinese characters
+    -- ABCABCAB -> ABC
+    for i = 1, text:len() do
+        local targetText = text:sub(1, i)
+        local p = floor(text:len() / i)
+        local q = text:len() - p * i
+
+        local validationText = ''
+        for j = 1, p do
+            validationText = validationText..targetText
+        end
+        validationText = validationText..targetText:sub(1, q)
+
+        if (text == validationText) then
+            text = targetText
+            break
+        end
     end
 
     -- Replace replication symbols
