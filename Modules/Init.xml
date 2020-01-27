@@ -1,6 +1,8 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
 	<Include file="Core.lua"/>
+	<Include file="SlashCommands.lua"/>
 	<Include file="Chat\Init.xml"/>
 	<Include file="Others\Init.xml"/>
 	<Include file="Antispam\Init.xml"/>
+	<Include file="Economy\Init.xml"/>
 </Ui>

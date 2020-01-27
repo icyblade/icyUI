@@ -1,12 +1,5 @@
 local _, Engine = ...
 
-if (IcyUIDB == nil) then
-    IcyUIDB = {
-        Insights = {},
-        SenderBlacklist = {}
-    }
-end
-
 Engine.Modules.Antispam = {}
 Engine.Modules.Antispam.PreProcessors = {}
 Engine.Modules.Antispam.ContentProcessors = {}
