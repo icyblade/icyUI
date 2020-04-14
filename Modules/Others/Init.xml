@@ -4,4 +4,5 @@
 	<Include file="AutoJoinBigFoot.lua"/>
 	<Include file="DisableNameInTown.lua"/>
 	<Include file="FastLoot.lua"/>
+	<Include file="ProfanityFilter.lua"/>
 </Ui>
