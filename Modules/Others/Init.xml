@@ -2,7 +2,7 @@
 	<Include file="Core.lua"/>
 	<Include file="AutoDismount.lua"/>
 	<Include file="AutoJoinBigFoot.lua"/>
-	<Include file="DisableNameInTown.lua"/>
+	<Include file="DisableInTown.lua"/>
 	<Include file="FastLoot.lua"/>
 	<Include file="ProfanityFilter.lua"/>
 </Ui>
