@@ -3,7 +3,7 @@ local _, Engine = ...
 local ContentProcessors = Engine.Modules.Antispam.ContentProcessors
 
 local Patterns = {
-    '招收', '招募', 'DKP', 'GKP'
+    '招收', '招募', 'DKP', 'GKP', '收人', '招人'
 }
 
 local function GuildRecruitProcessor(payload)

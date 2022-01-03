@@ -70,8 +70,8 @@ end
 PostProcessors.DedupPostProcessor = DedupPostProcessor
 
 local function ThrottleProcessor(payload)
-    if (IcyUIDB.Insights[payload.Text] ~= nil and 
-        2 <= time() - IcyUIDB.Insights[payload.Text].LastSeen and 
+    if (IcyUIDB.Insights[payload.Text] ~= nil and
+        1 <= time() - IcyUIDB.Insights[payload.Text].LastSeen and
         time() - IcyUIDB.Insights[payload.Text].LastSeen <= 60) then
         payload.Label = 'SPAM'
     end
