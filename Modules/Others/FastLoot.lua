@@ -12,6 +12,9 @@ Engine.Modules.Utils.FastLoot =
             if (GetTime() - TEMP_EPOCH) >= DELAY then
                 for i = GetNumLootItems(), 1, -1 do
                     LootSlot(i)
+                    if GetNumGroupMembers() > 0 then
+                        ConfirmLootSlot(i)
+                    end
                 end
 
                 TEMP_EPOCH = GetTime()
