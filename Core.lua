@@ -11,9 +11,3 @@ end
 if (IcyUIDB.Insights == nil) then
     IcyUIDB.Insights = {}
 end
-if (IcyUIDB.SenderBlacklist == nil) then
-    IcyUIDB.SenderBlacklist = {}
-end
-if (IcyUIDB.AHData == nil) then
-    IcyUIDB.AHData = {}
-end

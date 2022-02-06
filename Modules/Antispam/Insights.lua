@@ -1,12 +1,14 @@
 local _, Engine = ...
 
 local Insights = Engine.Modules.Antispam.Insights
+local gcPeriod = 60  -- GC every minute
+local retention = 3600  -- 1 hour of retention
 
 local function GC()
     local now = time()
-    if (IcyUIDB.LastGCTime == nil or now - IcyUIDB.LastGCTime >= 24 * 60 * 60) then
+    if (IcyUIDB.LastGCTime == nil or now - IcyUIDB.LastGCTime >= gcPeriod) then
         for key, data in pairs(IcyUIDB.Insights) do
-            if (now - data.LastSeen >= 24 * 60 * 60) then
+            if (now - data >= retention) then
                 IcyUIDB.Insights[key] = nil
             end
         end
@@ -15,18 +17,7 @@ local function GC()
 end
 
 local function AddRecord(payload)
-    if (IcyUIDB.Insights[payload.Text] == nil) then
-        IcyUIDB.Insights[payload.Text] = {
-            Payload = payload,
-            Count = 1,
-            LastSeen = time()
-        }
-    else
-        IcyUIDB.Insights[payload.Text].Count = IcyUIDB.Insights[payload.Text].Count + 1
-        IcyUIDB.Insights[payload.Text].LastSeen = time()
-    end
+    IcyUIDB.Insights[payload.Hash] = time()
     GC()
 end
 Insights.AddRecord = AddRecord
-
-

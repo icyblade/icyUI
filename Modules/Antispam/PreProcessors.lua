@@ -46,7 +46,7 @@ local confusionSymbols = {
 }
 
 local function DeconfusionPreProcessor(payload)
-    local text = payload.Text
+    local text = payload.Hash
     -- Convert to upper case due to limitation of case-insensitive regex
     text = string.upper(text)
 
@@ -55,6 +55,6 @@ local function DeconfusionPreProcessor(payload)
         text = string.gsub(text, i, '')
     end
 
-    payload.Text = text
+    payload.Hash = text
 end
 PreProcessors.DeconfusionPreProcessor = DeconfusionPreProcessor

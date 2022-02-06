@@ -9,28 +9,24 @@ local Utils = Engine.Modules.Antispam.Utils
 
 local function MessageCallback(self, event, text, playerName, ...)
     local payload = {
-        Event = event,
-        OriginalText = text,
         PlayerName = playerName,
+        Hash = text,
         Text = text,
-        HitPatterns = {},
-        Label = 'GOOD'
+        IsSpam = 0
     }
 
     PreProcessors.DeconfusionPreProcessor(payload)
     HeaderProcessors.SenderProcessor(payload)
     ContentProcessors.RMTProcessor(payload)
-    ContentProcessors.FlightProcessor(payload)
     ContentProcessors.TradeProcessor(payload)
-    ContentProcessors.GuildRecruitProcessor(payload)
     PostProcessors.ThrottleProcessor(payload)
     PostProcessors.DedupPostProcessor(payload)
 
-    if (payload.Label == 'SPAM') then
+    if (payload.IsSpam == 1) then
         return true
     else
         Insights.AddRecord(payload)
-        return false, payload.PostText, playerName, ...
+        return false, payload.Text, playerName, ...
     end
 end
 
