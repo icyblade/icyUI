@@ -8,11 +8,12 @@ Engine.Modules.Utils.FastLoot =
     Engine.AceEvent:RegisterEvent(
     'LOOT_READY',
     function()
+        local isAlone = (GetNumGroupMembers() == 0)
         if GetCVarBool('autoLootDefault') ~= IsModifiedClick('AUTOLOOTTOGGLE') then
             if (GetTime() - TEMP_EPOCH) >= DELAY then
                 for i = GetNumLootItems(), 1, -1 do
                     LootSlot(i)
-                    if GetNumGroupMembers() > 0 then
+                    if isAlone then
                         ConfirmLootSlot(i)
                     end
                 end
