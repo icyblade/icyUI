@@ -9,6 +9,7 @@ local TOWN_MASK = {
     [1456] = true, -- Thunder Bluff
     [1457] = true, -- Darnassus
     [1458] = true, -- Undercity
+    [1955] = true, -- Shattrath City
 }
 
 local TARGET_EVENTS = {
