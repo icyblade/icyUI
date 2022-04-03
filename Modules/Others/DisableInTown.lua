@@ -10,6 +10,7 @@ local TOWN_MASK = {
     [1457] = true, -- Darnassus
     [1458] = true, -- Undercity
     [1955] = true, -- Shattrath City
+    [1952] = true, -- Terokkar Forest
 }
 
 local TARGET_EVENTS = {
