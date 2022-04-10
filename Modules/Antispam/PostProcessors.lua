@@ -71,8 +71,8 @@ PostProcessors.DedupPostProcessor = DedupPostProcessor
 
 local function ThrottleProcessor(payload)
     if (IcyUIDB.Insights[payload.Hash] ~= nil and
-        1 <= time() - IcyUIDB.Insights[payload.Hash] and
-        time() - IcyUIDB.Insights[payload.Hash] <= 60) then
+        0.001 <= GetTime() - IcyUIDB.Insights[payload.Hash] and
+        GetTime() - IcyUIDB.Insights[payload.Hash] <= 60) then
         payload.IsSpam = 1
     end
 end
