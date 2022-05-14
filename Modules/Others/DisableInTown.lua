@@ -11,6 +11,7 @@ local TOWN_MASK = {
     [1458] = true, -- Undercity
     [1955] = true, -- Shattrath City
     [1952] = true, -- Terokkar Forest
+    [1957] = true, -- Isle of Quel'Danas
 }
 
 local TARGET_EVENTS = {
