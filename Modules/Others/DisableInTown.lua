@@ -26,9 +26,11 @@ local function DisableNameInTownCallback()
     if (TOWN_MASK[mapID]) then
         SetCVar('UnitNameFriendlyPlayerName', 0)
         SetCVar('UnitNameFriendlyPetName', 0)
+        SetCVar('nameplateShowFriends', 0)
     else
         SetCVar('UnitNameFriendlyPlayerName', 1)
         SetCVar('UnitNameFriendlyPetName', 1)
+        SetCVar('nameplateShowFriends', 1)
     end
 end
 
