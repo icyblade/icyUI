@@ -12,6 +12,8 @@ local TOWN_MASK = {
     [1955] = true, -- Shattrath City
     [1952] = true, -- Terokkar Forest
     [1957] = true, -- Isle of Quel'Danas
+    [125] = true, -- Dalaran - Dalaran City
+    [126] = true, -- Dalaran - The Underbelly
 }
 
 local TARGET_EVENTS = {
@@ -30,7 +32,6 @@ local function DisableNameInTownCallback()
     else
         SetCVar('UnitNameFriendlyPlayerName', 1)
         SetCVar('UnitNameFriendlyPetName', 1)
-        SetCVar('nameplateShowFriends', 1)
     end
 end
 
